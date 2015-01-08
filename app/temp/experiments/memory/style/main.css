@@ -1,0 +1,46 @@
+input[type="button"] {
+  padding: 1em 3em;
+  background: forestgreen;
+  color: white;
+  border-radius: 21px;
+  border-width: 6px; }
+
+header {
+  text-align: center; }
+
+.hidden {
+  visibility: hidden; }
+
+figure {
+  background-color: blue;
+  background-color: blue;
+  height: 100%;
+  padding: 3px;
+  margin: 2px;
+  display: inline-block; }
+
+.visible {
+  visibility: visible;
+  -webkit-animation: showCard .3s;
+  animation: showCard .3s; }
+
+@keyframes showCard {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@-webkit-keyframes showCard {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+section {
+  width: 70%;
+  box-shadow: -4px -1px 4px 0 #fafaff, -1px 0 4px 4px #d4d4d4, 2px 0 4px #fafaff, 0 1px 4px 2px gray, 10px 5px 5px #fafaff, 3px 3px 3px 2px whitesmoke;
+  margin: 0 auto; 
+}
+
+input[type="button"] {
+  margin-bottom: 3em; }
+
+/*# sourceMappingURL=main.css.map */

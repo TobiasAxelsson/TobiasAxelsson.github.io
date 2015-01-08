@@ -1,0 +1,53 @@
+input[type="button"] {
+    padding: 1em 3em;
+    background: forestgreen;
+    color: white;
+    border-radius: 21px;
+    border-width: 6px;
+}
+
+header {
+    text-align: center;
+}
+.hidden{
+	visibility: hidden;
+}
+figure{
+	background-color: blue;
+	background-color: hsl(240, 100%, 50%);
+	height: 100%;
+	padding: 3px;
+	margin: 2px;
+	display: inline-block;
+}
+.visible{
+	visibility: visible;
+    -webkit-animation: showCard .3s;
+    animation:showCard .3s;
+}
+@keyframes showCard{
+    from {
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+@-webkit-keyframes showCard{
+    from {
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+section {
+    width: 70%;
+    box-shadow: -4px -1px 4px 0 hsl(240, 100%, 99%), -1px 0 4px 4px hsl(0, 0%, 83%), 2px 0 4px hsl(240, 100%, 99%), 0 1px 4px 2px hsl(0, 0%, 50%), 10px 5px 5px hsl(240, 100%, 99%), 3px 3px 3px 2px whitesmoke;
+    margin: 0 auto;
+}
+
+input[type="button"] {
+    margin-bottom: 3em;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animated square</title>
+	<style>
+	.container {
+
+	}
+	.square {
+		position: absolute;
+		left: calc(50vw - 50px);
+		top: calc(50vh - 50px);
+	}
+	.static{
+		background-color:white;
+		border: 0px gray dotted;
+		left: calc(50vw - 55px);
+		width: 110px;
+		top: calc(50vh - 55px);
+		height: 105px;
+	}
+	.animated{
+		width:90px;
+		height:100px;
+		z-index: -1;
+		border-bottom: 2px purple solid;
+		-webkit-box-shadow:  0 2px 5px blue;
+		box-shadow:  0 2px 5px blue;
+		-webkit-animation: animate_border 1s infinite;
+	}
+	@-webkit-keyframes animate_border{
+		0% {
+			width:0;
+			left:calc(50vw - 50px);	
+		}
+		10% {
+			width:15px;
+			left:calc(50vw - 50px);	
+		}
+		90% {
+			width:15px;
+			left:calc(50vw + 35px);
+		}
+		100% {
+			width:0px;
+			left:calc(50vw + 50px);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="square static">
+			
+		</div>
+		<div class="square animated">
+			
+		</div>
+	</div>
+</body>
+</html>

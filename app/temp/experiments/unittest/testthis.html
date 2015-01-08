@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UnitTesting JS</title>
+
+	<style>
+	#results li.pass {
+		color:green;
+	}
+	#results li.fail {
+		color:red;
+	}
+	</style>
+</head>
+<body>
+	<ol id="results"></ol>
+		<script>
+		var queue = [], paused = false, results;
+		
+		this.test = function(name, fn) {
+			queue.push(function() {
+				results = document.getElementById("results");
+				results = assert(true, name).appendChild(document.createElement("ul"));
+				fn();
+			});
+			runTest();
+		};
+		this.pause = function() {
+			paused = true;
+		};
+		this.resume = function() {
+			paused = false;
+			setTimeout(runTest, 1);
+		};
+		function runTest() {
+			if (!paused && queue.length) {
+				queue.shift()();
+				if (!paused) {
+					resume();
+				}
+			}
+		}
+		assert = function assert(value, desc) {
+			var li = document.createElement("li");
+			li.className = value ? "pass" : "fail";
+			li.appendChild(document.createTextNode(desc));
+			results.appendChild(li);
+			if (!value){
+				li.parentNode.parentNode.className = "fail";
+			}
+			return li;
+		};
+		test("Testing", function(){});
+		function creep() {
+			console.log(this);
+			return this;
+		}
+		assert(creep() === window, "Creeping in the window");
+		var sneak = creep;
+		assert(sneak() === window, "Sneaking in the window");
+		var ninja1 = {skulk:creep};
+		assert(ninja1.skulk() === ninja1, "The 1st ninja is skulking");
+		var ninja2 = {skulk:creep};
+		assert(ninja2.skulk() === ninja2, "The 2nd ninja is skulking");
+	</script>
+</body>
+</html>

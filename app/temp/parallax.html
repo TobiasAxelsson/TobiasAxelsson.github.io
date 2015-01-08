@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>just css</title>
+	<link rel="stylesheet" href="style/normalize.3.0.2.css">
+	<link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+<style>
+body{
+  width:100vw;
+}
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin:0 auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*padding: 100vh 0;*/
+}
+.parallax__layer--back {
+  transform: translateZ(-4px) scale(5);
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+  padding: 100vh 0;
+}
+
+</style>
+</head>
+<body>
+	<div class="parallax">
+  <div class="parallax__layer parallax__layer--back">
+    <img src="http://lorempixel.com/1367/760/abstract/3" alt="A random Pic">
+  </div>
+  <div class="parallax__layer parallax__layer--base">
+    <img src="http://lorempixel.com/1367/760/abstract/4" alt="A random pic">
+  </div>
+</div>
+</body>
+</html>

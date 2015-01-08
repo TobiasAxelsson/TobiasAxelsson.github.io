@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>TobiasAxelsson github io</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<header>
+    <h1>just css</h1>
+    <label for="nav-toggle" class="nav-toggle">
+    <svg width="32" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+     <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+     <title class="menu">menu</title>
+      <g>
+        <title>menu_lines</title>
+        <line id="line_1" y2="2.5" x2="32" y1="2.5" x1="0" stroke-width="5" fill="none" stroke="#000000"/>
+        <line id="line_2" y2="12" x2="32" y1="12" x1="0" stroke-width="5" fill="none" stroke="#000000"/>
+        <line id="line_3" y2="21.5" x2="32" y1="21.5" x1="0" stroke-width="5" fill="none" stroke="#000000"/>
+      </g>
+    </svg>
+    </label>
+    <input type="checkbox" id="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="">Library</a></li><li><a href="experiments/index.html">Experiments</a></li><li><a href="">About</a></li><li><a href="">Contact</a></li><li><a href="">For Hire</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>GitHub API</h2>
+      <p><small>
+        <span class="published">Published: <datetime datetime="2015-01-07 18:35:36"> 2015-01-07 18:35:36</datetime></span>
+        <span class="modified"> Modified: <datetime datetime="2015-01-07 18:35:36">2015-01-07 18:35:36</datetime></span>
+        <span class="author">Written by: Tobias Axelsson</span>
+      </small></p>
+      <section>
+        <h3>GitHub API next</h3>
+        <p>GitHubs API is very versatile. You can find everything you need to get started here: <a href="https://developer.github.com/v3/">https://developer.github.com/v3/</a></p>
+        <p>Another xhr request later to something like <a href="https://api.github.com/users/Sibot/repos">https://api.github.com/users/Sibot/repos</a> and you have a list of your repositories available for parsing.</p>
+        <p>I want to make my repos available on the site from the Experiments link in the menu.</p>
+      </section>
+    </article>
+    <article>
+      <h2>MFRWD</h2>
+      <p><small>
+        <span class="published">Published: <datetime datetime="2014-12-05 10:33:15"> 2014-12-18 10:33:15</datetime></span>
+        <span class="modified"> Modified: <datetime datetime="2014-12-20 20:12:00">2014-12-20 20:12:00</datetime></span>
+        <span class="author">Written by: Tobias Axelsson</span>
+      </small></p>
+      <section>
+        <h3>mobile first responsive web design</h3>
+        <h4>What is it?</h4>
+        <p>Chosing to follow a mobile first approach makes you design for a mobile view first and then adapt the design for larger viewports in media queries rather then the opposite.</p>
+        <p>Responsive on the other hand is a uniform design that adapts to the viewport.</p>
+        <p>Combined they make a more easily maintained code base.</p>
+        <h4>Features of this design</h4>
+        <ul>
+          <li>An easy to generate HTML markup for backend generated content.</li>
+          <li>First article becomes fullscreen for easy promotion </li>
+          <li>CSS only menu for medium to small viewports.</li>
+          <li>Fixed top bar with logo and menu</li>
+          <li>Optional fixed footer</li>
+          <li>Dual and tripple column layout at larger viewports</li>
+          <li>images auto resize to layout width</li>
+        </ul>
+        <p>I started writing this design as a trial and error learning to make something not terrible. This is the third iteration of the same design, the other two failed. A fixed responsive top menu and bottom footer. I wanted a CSS-only base design and add JavaScript only if necessary in order to properly learn the ins and outs of responsive CSS through media queries and relative units.</p>
+        <p> When I was happy with the menu I started working on a full screen responsive article and researching the "vw" and "vh" units. It seems support is a bit wobbly still, even my IDE Sublime Text 2 doesn't know what it is. </p>
+        <p>With a full screen responsive article and menu I continued making a responsive collection of older articles. Low resolution yields one column, higher shows two and higher still gives you three columns. Im pretty happy with this layout. Now to make some content for it... </p>
+      </section>
+    </article>
+    <article>
+      <h2>Wordpress integration.</h2>
+      <p><small>
+        <span class="published">Published: <datetime datetime="2014-12-05 10:33:15"> 2014-12-18 10:33:15</datetime></span>
+        <span class="modified"> Modified: <datetime datetime="2014-12-20 20:12:00">2014-12-20 20:12:00</datetime></span>
+        <span class="author">Written by: Tobias Axelsson</span>
+      </small></p>
+      <section>
+        <p>Say what you like about wordpress. I think it is a good enough place to write your blog on. What if you could write your posts on Wordpress and then have then show up on your site as they are published? </p>
+        <p>Lets see if we can do this.
+        Wordpress apperently has an API for accessing posts of a particular site/author/blog/whatnot. I write my posts on the site: https://fend14tobis.wordpress.com
+        You can access a post from this collection like so: <pre><a href="https://public-api.wordpress.com/rest/v1/sites/fend14tobis.wordpress.com/posts/">https://public-api.wordpress.com/rest/v1/sites/fend14tobis.wordpress.com/posts/</a></pre>
+        <p>Making a request for this data gives a collection of my posts in JSON-format. More to read here: <a href="https://developer.wordpress.com/docs/api/">https://developer.wordpress.com/docs/api/</a>. Displaying it on another site will require either JavaScript for clientside access or serverside scripting like PHP or .NET. I'm gonna opt for JavaScript just for fun. There are a number of complications to this choice but it's all for the learning process.</p>
+        <ul>
+          <li>Disabled JavaScript will not fetch content</li>
+          <li>Network may prove unreliable to fetch content</li>
+          <li>The content will not load untill the browser has parsed the script.</li>
+          <li>Constructing the elements in Javascript is not fun.</li>
+          <li>JavaScript should enhance content viewing, not allow content viewing.</li>
+        </ul>
+        <p>
+          Let&apos;s not think about those points. A request to the API is just an xhr away. Parse the response and construct the elements to contain the data. Add the elements to the DOM and we&apos;re done.
+        </p>
+      </section>
+    </article>
+
+  </main>
+  <footer>
+    <small>
+        <span>&copy;<a href="mailto:someguy@themobilefirstresponsivewebdesignagency.whatever">Tobias Axelsson</a> 2014</span>
+    </small>
+  </footer>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-38487683-1');ga('send','pageview');
+    </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
