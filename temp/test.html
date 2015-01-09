@@ -1,12 +1,4 @@
-<!doctype html>
-<html data-ng-app="scene">
-<head>
- <title>
-  Testing AngularJS and three.js interaction</title>
-  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css">
-<style>
-.menu{
+<!DOCTYPE html> <html data-ng-app=scene> <head> <title> Testing AngularJS and three.js interaction</title> <link rel=stylesheet type=text/css href=http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css> <link rel=stylesheet type=text/css href=http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css> <style>.menu{
  padding:5px;
  background-color: #666;
 }
@@ -154,72 +146,7 @@
 }
 .my-text span{
  color:#888;
-}
-</style>
-</head>
-<body data-ng-controller="sceneCtrl">
-
- <nav class="container menu">
-  <ul id="top-menu">
-    <li>
-     <a href="#">Scene</a>
-      <ul>
-        <li><a href="#">Ruby</a></li>
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">PHP</a></li>
-        <li><a href="#">JavaScript</a></li>
-        <li><a href="#">C++</a></li>
-      </ul>
-    </li>
-    <li>
-     <a href="#">Browsers</a>
-      <ul>
-        <li><a href="#">Chrome</a></li>
-        <li><a href="#">Opera</a></li>
-        <li><a href="#">IE</a></li>
-        <li><a href="#">Firefox</a></li>
-        <li><a href="#">Safari</a></li>
-      </ul>
-   </li>
-   <li>
-    <a href="#">Operating System</a>
-   <ul>
-       <li><a href="#">Windows</a></li>
-       <li><a href="#">Linux</a></li>
-       <li><a href="#">FreeBSD</a></li>
-       <li><a href="#">Mac OS</a></li>
-     </ul>
-   </li>
-   <li><a href="#">Settings</a>
-    <ul>
-     <li data-ng-repeat="(key, val) in camera.position"><a href="#">{{key}}:{{val}}</a></li>
-     <li>
-    <div>
-     <label for="keepLogin" class="mylabel">Remember:</label>
-     <div class="checkBox">
-      <input type="checkbox" id="keepLogin" data-ng-model="user.keepLogin" data-ng-click="keepLogin()"/>
-      <label for="keepLogin"></label>
-     </div>
-     <div class="clear"></div>
-    </div>
-    </li>
-     <li><a href="#/logout">Log out</a></li>
-  </ul>
- </nav>
- <section class="container well">
-  <header><h2>{{title}}</h2></header>
-  <article>{{article}}</article>
-    <button type="button" class="btn btn-large my-btn"><span class="my-text"><span>&#9733;</span> Checkout <span>&#9733;</span></span></button>
-
- </section>
-
-<script src="angular.js"></script>
-<script src="typedarray.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r61/three.min.js"></script>
-<script src="FirstPersonControls.js"></script>
-<script>
-var scene = angular.module("scene", [])
+}</style>  <body data-ng-controller=sceneCtrl> <nav class="container menu"> <ul id=top-menu> <li> <a href=#>Scene</a> <ul> <li><a href=#>Ruby</a></li> <li><a href=#>HTML</a></li> <li><a href=#>CSS</a></li> <li><a href=#>PHP</a></li> <li><a href=#>JavaScript</a></li> <li><a href=#>C++</a></li> </ul> </li> <li> <a href=#>Browsers</a> <ul> <li><a href=#>Chrome</a></li> <li><a href=#>Opera</a></li> <li><a href=#>IE</a></li> <li><a href=#>Firefox</a></li> <li><a href=#>Safari</a></li> </ul> </li> <li> <a href=#>Operating System</a> <ul> <li><a href=#>Windows</a></li> <li><a href=#>Linux</a></li> <li><a href=#>FreeBSD</a></li> <li><a href=#>Mac OS</a></li> </ul> </li> <li><a href=#>Settings</a> <ul> <li data-ng-repeat="(key, val) in camera.position"><a href=#>{{key}}:{{val}}</a></li> <li> <div> <label for=keepLogin class=mylabel>Remember:</label> <div class=checkBox> <input type=checkbox id=keepLogin data-ng-model=user.keepLogin data-ng-click="keepLogin()"> <label for=keepLogin></label> </div> <div class=clear></div> </div> </li> <li><a href=#/logout>Log out</a></li> </ul> </li></ul></nav> <section class="container well"> <header><h2>{{title}}</h2></header> <article>{{article}}</article> <button type=button class="btn btn-large my-btn"><span class=my-text><span>&#9733;</span> Checkout <span>&#9733;</span></span></button> </section> <script src=angular.js></script> <script src=typedarray.js></script> <script src=http://cdnjs.cloudflare.com/ajax/libs/three.js/r61/three.min.js></script> <script src=FirstPersonControls.js></script> <script>var scene = angular.module("scene", [])
 .controller("sceneCtrl", function ( $scope ){
  $scope.camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
  $scope.controls = new THREE.FirstPersonControls($scope, $scope.camera);
@@ -242,7 +169,4 @@ var scene = angular.module("scene", [])
  }
  render();
 // 
-})
-</script>
-</body>
-</html>
+})</script>  
